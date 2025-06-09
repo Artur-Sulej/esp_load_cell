@@ -16,7 +16,11 @@ fn main() {
     let delay = Delay::new_default();
 
     let mut load_sensor = HX711::new(sck, dt, delay);
+    let mut buzzer = PinDriver::output(peripherals.pins.gpio5).unwrap();
 
+    let mut buzz = false;
+
+    buzzer.set_high().unwrap();
     load_sensor.tare(16);
     load_sensor.set_scale(1.0);
 
@@ -28,6 +32,12 @@ fn main() {
             // log::info!("Weight: {} g", reading); // Use this to get all the decimals
         }
 
+        if buzz {
+            buzzer.set_high().unwrap();
+        } else {
+            buzzer.set_low().unwrap();
+        }
+        buzz = !buzz;
         FreeRtos::delay_ms(1000u32);
     }
 }
