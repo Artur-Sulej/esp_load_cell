@@ -1,7 +1,6 @@
-# Rust-Powered Smart Trash Bin (Garbage Collector)
+# Rust-Powered Smart Trash Bin (Garbage Collector, kind of)
 
-> **I built a garbage collector in Rust! 🗑️🦀**  
-> (But not *that* kind of garbage collector…)
+![photo1.jpeg](photo1.jpeg)
 
 ## Overview
 
@@ -33,7 +32,7 @@ It’s powered by an ESP32-C3 microcontroller and written entirely in Rust.
 | Transistor base | GPIO5 via 1kΩ resistor |                          |
 | Transistor emitter | GND     |                                      |
 
-> **Tip:** You can use [Fritzing](https://fritzing.org/) or [Wokwi](https://wokwi.com/) with custom chips for wiring diagrams.
+![wiring.png](wiring.png)
 
 ## How It Works
 
