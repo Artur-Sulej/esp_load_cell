@@ -4,13 +4,16 @@
 
 ## Overview
 
-This project is a fun and practical IoT device: a smart trash bin that detects when it’s full and buzzes to let you know it’s time to take out the trash.  
+This project was prepared for the Rust Warsaw Meetup.
+It is a fun and practical IoT device: a smart trash bin that detects when it’s full and buzzes to let you know it’s time to take out the trash.  
 It’s powered by an ESP32-C3 microcontroller and written entirely in Rust.
 
 - **Detects weight** using a load cell and HX711 amplifier
 - **Buzzes** when the bin is full (weight threshold exceeded)
 - **Logs weight readings** to the serial console
 - **Beginner-friendly** Rust code and hardware setup
+
+Presentation slides: [presentation.pdf](presentation.pdf)
 
 ## Hardware Used
 
